@@ -1,0 +1,1568 @@
+:root {
+    --bg-gray: #f0f0f0;
+    --text-main: #333;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.z-0 {
+    z-index: 0;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-20 {
+    z-index: 20;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+/* Sidebar */
+.sidebar {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 256px;
+    height: 100vh;
+    padding: 40px;
+    background-color: white;
+    border-right: 1px solid var(--gray-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+
+.sidebar-logo {
+    margin-bottom: 80px;
+}
+
+.sidebar-logo h1 {
+    font-size: 2.25rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    letter-spacing: 0.1em;
+    color: #000;
+    margin: 0;
+}
+
+.sidebar-logo p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--gray-500);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.nav-link {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--gray-400);
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    transform: translateX(0);
+}
+
+.nav-link:hover {
+    color: #000;
+    font-weight: 500;
+    transform: translateX(8px);
+}
+
+.nav-link.active {
+    color: #000 !important;
+    font-weight: 500;
+}
+
+.sidebar-social {
+    display: flex;
+    gap: 16px;
+    color: var(--gray-400);
+}
+
+.sidebar-social i {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    transform: scale(1);
+}
+
+.sidebar-social i:hover {
+    color: #000;
+    transform: scale(1.3);
+}
+
+.sidebar-info {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-info-text {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+.sidebar-info-text small {
+    font-size: 10px;
+    color: var(--gray-400);
+}
+
+.sidebar-map-btn {
+    display: inline-block;
+    padding: 8px 40px;
+    border: 1px solid var(--gray-300);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.sidebar-map-btn:hover {
+    background: #000;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-images-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-image.active {
+    opacity: 1;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.hero-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.hero-mobile-header h1 {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    letter-spacing: 0.1em;
+    color: #000;
+}
+
+/* Concept Section */
+.concept-section {
+    padding: 0 24px;
+    z-index: 10;
+}
+
+.concept-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.concept-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #ede7e7a5;
+    z-index: 0;
+}
+
+.concept-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding-top: 64px;
+}
+
+.concept-label {
+    font-size: 40px;
+    font-family: 'Academy Engraved LET', serif;
+    color: var(--gray-400);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.concept-title {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    line-height: 1.25;
+    color: var(--gray-900);
+    letter-spacing: 0.05em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.concept-title-line1 {
+    display: block;
+    white-space: nowrap;
+}
+
+.concept-title-line2 {
+    display: block;
+    margin-left: 50%;
+    text-align: left;
+}
+
+.concept-text {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 430px;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Songti TC', serif;
+    color: var(--gray-600);
+    line-height: 1.75;
+    letter-spacing: 0.1em;
+}
+
+.concept-btn {
+    margin-top: 48px;
+    padding: 16px 64px;
+    border: 1px solid var(--gray-900);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.concept-btn:hover {
+    background: #000;
+    color: white;
+}
+
+.concept-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(64px);
+}
+
+.concept-image-primary {
+    width: 85%;
+    aspect-ratio: 1;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.concept-image-primary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomIn 12s ease-in-out infinite;
+}
+
+@keyframes zoomIn {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.concept-image-secondary {
+    position: absolute;
+    bottom: -300px;
+    left: 10px;
+    width: 65%;
+    aspect-ratio: 1;
+    z-index: 0;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.concept-image-secondary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomIn 12s ease-in-out infinite;
+}
+
+/* Quality Section */
+.quality-section {
+    padding: 80px 24px;
+    margin-top: 200px;
+    background-color: white;
+    z-index: 1;
+}
+
+.quality-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.quality-image-wrapper {
+    position: relative;
+}
+
+.quality-image-container {
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none; 
+}
+
+.quality-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 1s;
+}
+
+
+.quality-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.quality-label {
+    font-size: 1.75rem;
+    font-family: 'Academy Engraved LET', serif;
+    color: var(--gray-400);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.quality-title {
+    font-size: 1.875rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    line-height: 1.25;
+    color: var(--gray-900);
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.quality-text {
+    font-size: 0.875rem;
+    font-weight: 300;
+    font-family: 'Songti TC', serif;
+    color: var(--gray-500);
+    line-height: 2;
+    margin-bottom: 48px;
+    max-width: 448px;
+    letter-spacing: 0.1em;
+}
+
+.quality-btn {
+    margin-top: 48px;
+    padding: 16px 64px;
+    border: 1px solid var(--gray-900);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quality-btn:hover {
+    background: #000;
+    color: white;
+}
+/* Quality image overlay */
+.quality-image-container{
+    position: relative;
+    width: 100%;
+}
+
+.quality-base{
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(0.83);  /* 👈 小于 1 就是缩小 */
+}
+
+.quality-overlay{
+    position: absolute;
+    inset: 0;                 /* 覆盖整张图 */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* 需要铺满可改 cover */
+    z-index: 2;
+    pointer-events: none;     /* 不挡鼠标 */
+    transform: scale(1.9);   /* 👈 放大倍数，1 = 原大小 */
+}
+
+/* News Section */
+.news-section {
+    padding: 0 24px;
+    background-color: white;
+}
+
+.news-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.news-label {
+    font-size: 40px;
+    font-family: 'Academy Engraved LET', serif;
+    color: var(--gray-400);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 48px;
+}
+
+.news-wrapper {
+    background-color:#c8b2a19f;
+    border-radius: 60px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.news-item {
+    background-color: white;
+    border-radius: 40px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.news-item:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: scale(1.05);
+}
+
+.news-item-content {
+    flex: 1;
+}
+
+.news-date {
+    color: var(--gray-400);
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 0.1em;
+}
+
+.news-text {
+    color: var(--gray-900);
+    font-weight: 300;
+    font-family: 'Songti TC', serif;
+    line-height: 1.75;
+    font-size: 1.125rem;
+    letter-spacing: 0.05em;
+    max-width: 768px;
+}
+
+.news-arrow {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background-color: #232742;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.news-item:hover .news-arrow {
+    transform: scale(1.1);
+}
+
+/* Gallery Section */
+.gallery-section {
+    overflow: hidden;
+    background-color: white;
+}
+
+.gallery-bg-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0.04;
+}
+
+.gallery-bg-text span {
+    font-size: 25vw;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    white-space: nowrap;
+    letter-spacing: -0.05em;
+    user-select: none;
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    padding: 0 24px;
+    gap: clamp(12px, 3vw, 32px);
+}
+
+.gallery-card {
+    width: clamp(400px, 42vw, 520px); /* 👈 放大 */
+    aspect-ratio: 3.5 / 4.5;
+    overflow: hidden;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.gallery-card img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+}
+
+
+.gallery-card:nth-child(2) {
+    z-index: 20;
+}
+
+/* Menu Intro Section */
+.menu-intro-section {
+    padding: 20px 24px 150px 24px;
+    background-color: white;
+    justify-content: flex-start !important;
+    min-height: auto !important;
+}
+
+.menu-intro-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background-color: #efe7e0;
+    border-radius: 60px;
+    padding: 32px;
+}
+
+.menu-intro-label {
+    font-size: 40px;
+    font-family: 'Academy Engraved LET', serif;
+    color: var(--gray-400);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 32px;     /* 👈 往右挪 */
+}
+
+.menu-intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 800px;
+}
+
+.menu-intro-text-large {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    color: #000;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+    font-weight: 400;
+    margin-left: 50px;     /* 👈 往右挪 */
+}
+
+.menu-intro-text-small {
+    font-size: 1.75rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    color: #000;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    margin: 0;
+    font-weight: 400;
+    margin-left: 50px; 
+}
+
+.menu-intro-btn {
+    align-self: flex-start;   /* ⭐ 核心 */
+    margin-top: 48px;
+    margin-left: 50px;
+    padding: 14px 52px;
+    border: 1px solid var(--gray-900);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-intro-btn:hover {
+    background: #000;
+    color: white;
+}
+
+/* Menu Detail Section */
+.menu-detail-section {
+    padding: 0 24px;
+}
+
+.menu-detail-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.menu-detail-label {
+    font-size: 0.875rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    color: var(--gray-400);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 48px;
+}
+
+.menu-detail-card {
+    position: relative;
+    background-color: white;
+    border: 1px solid var(--gray-100);
+    border-radius: 60px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.menu-detail-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu-detail-number {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--gray-900);
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+}
+
+.menu-detail-category {
+    font-size: 0.75rem;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    color: #ef4444;
+    letter-spacing: 0.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.menu-detail-title {
+    font-size: 1.75rem;
+    font-family: 'Songti TC', serif;
+    color: var(--gray-900);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.menu-detail-description {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    line-height: 2;
+    font-weight: 300;
+    font-family: 'Songti TC', serif;
+    letter-spacing: 0.1em;
+    max-width: 448px;
+}
+
+.menu-detail-btn {
+    margin-top: 16px;
+    padding: 16px 48px;
+    background-color: #620000;
+    color: white;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-detail-btn:hover {
+    background-color: var(--gray-800);
+}
+
+.menu-detail-image {
+    flex: 1;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.menu-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomIn 12s ease-in-out infinite;
+}
+
+/* ===== Menu Stack Scroll (card stack + scroll paging) ===== */
+.menu-stack-section {
+    /* 这块我们不希望被全局 section 居中影响 */
+    justify-content: flex-start;
+    min-height: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.menu-stack-scroll {
+    /* 这块高度决定"翻页要滚多久"：越大越慢 */
+    height: 450vh;
+    position: relative;
+}
+
+.menu-stack-sticky {
+    position: sticky;
+    top: 110px; /* 让它停在导航下方 */
+    z-index: 10;
+}
+
+.menu-stack-stage {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: min(680px, calc(100vh - 160px));
+}
+
+.menu-stack-shell {
+    position: absolute;
+    inset: 0;
+    border-radius: 56px;
+    border: 2px solid rgba(200, 200, 200, 0.55);
+    background: transparent;
+    pointer-events: none;
+}
+
+.menu-stack-shell-1 { transform: translateY(-22px) scale(1.01); opacity: 0.55; }
+.menu-stack-shell-2 { transform: translateY(-42px) scale(1.02); opacity: 0.38; }
+.menu-stack-shell-3 { transform: translateY(-60px) scale(1.03); opacity: 0.24; }
+
+/* 每一页卡片：absolute 叠在同一舞台，由 JS 写入 --enter/--shrink */
+.menu-stack-card-page {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    transform-origin: center top;
+
+    --enter: 0;   /* 0->1 进入 */
+    --shrink: 0;  /* 0->1 被翻过去时缩小 */
+    --base-opacity: 0;
+
+    opacity: calc(var(--base-opacity) + var(--enter));
+    transform:
+        translateY(calc((1 - var(--enter)) * 120px + var(--shrink) * -24px))
+        scale(calc(1 - var(--shrink) * 0.06));
+
+    transition: none; /* 完全跟随滚动，不要过渡 */
+}
+
+/* 第一页默认可见，作为底层卡片 */
+.menu-stack-card-page[data-index="0"] {
+    --base-opacity: 1;
+    opacity: 1;
+    transform: none !important;
+    z-index: 1;
+}
+
+/* 02-06卡片：移除渐变效果，始终不透明，起始位置下移 */
+.menu-stack-card-page[data-index="1"],
+.menu-stack-card-page[data-index="2"],
+.menu-stack-card-page[data-index="3"],
+.menu-stack-card-page[data-index="4"],
+.menu-stack-card-page[data-index="5"] {
+    opacity: 1 !important;
+}
+
+/* 02-06：保持与01同样大小（不跟随 shrink 缩小） */
+.menu-stack-card-page[data-index="1"],
+.menu-stack-card-page[data-index="2"],
+.menu-stack-card-page[data-index="3"],
+.menu-stack-card-page[data-index="4"],
+.menu-stack-card-page[data-index="5"] {
+    transform:
+        translateY(calc((1 - var(--enter)) * (120px + 600px)))
+        scale(1);
+}
+
+/* 进入中的卡片更"实"一些 */
+.menu-stack-card-page.is-active {
+    box-shadow: 0 26px 60px rgba(0,0,0,0.10);
+}
+
+/* ⚠️ 避免 reveal 给卡片本体写 transform（会覆盖翻页 transform） */
+.menu-stack-card-page.reveal,
+.menu-stack-card-page.reveal.active {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+    .menu-stack-sticky { top: 70px; }
+    .menu-stack-scroll { height: 260vh; }
+    .menu-stack-stage { height: min(620px, calc(100vh - 140px)); }
+}
+
+/* Access Section */
+/* Access Section */
+.access-section{
+  justify-content: flex-start;
+  min-height: auto;
+  padding: 600px 24px 0 24px;
+}
+
+/* ✅ 左右两栏，像图里那样 */
+.access-container{
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: var(--bg-gray);
+  border-radius: 60px;
+  padding: 64px 56px;
+  display: flex;
+  gap: 56px;
+  align-items: stretch;
+}
+
+/* 左侧文字 */
+.access-content{
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 右侧图片 */
+.access-image{
+  flex: 0.9;
+  height: 520px;          /* ✅ 直接控制高度（推荐 380–440） */
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+              0 4px 6px -2px rgba(0,0,0,0.05);
+  margin-top: 250px;
+}
+
+.access-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 12s ease-in-out infinite;
+}
+
+
+.access-label{
+  font-size: 35px;
+  font-family: 'Academy Engraved LET', serif;
+  color: var(--gray-500);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.access-title{
+  font-size: 3rem;
+  font-family: 'Playfair Display','Noto Serif JP',serif;
+  color: var(--gray-900);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* ✅ 图里的长分割线 */
+.access-divider{
+  height: 1px;
+  width: 100%;
+  background: var(--gray-300);
+  margin: 22px 0;
+}
+
+/* 信息区：去掉你原来的 border-top，用我们自己控制线条 */
+.access-info{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.access-row-divider{
+  height: 1px;
+  width: 100%;
+  background: var(--gray-300);
+}
+
+/* 每行 */
+.access-info-row{
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* label 更像图里：小、细 */
+.access-info-label{
+  width: 140px;
+  font-size: 0.9rem;
+  font-family: 'Noto Serif JP','Playfair Display',serif;
+  color: var(--gray-700);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* value 更细一点 */
+.access-info-value{
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+  font-family: 'Songti TC', serif;
+  color: var(--gray-800);
+}
+
+/* 有按钮/注释时用纵向堆叠 */
+.access-info-row-stack .access-info-group{
+  display: flex;
+  flex-direction: column;
+  margin-left: -30px; /* ✅ 向左挪，推荐 -12 ~ -20 */
+  gap: 18px;
+}
+
+/* MAP 按钮：图里更扁更细 */
+.access-map-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 44px;
+  border: 1px solid var(--gray-400);
+  border-radius: 9999px;
+  background: transparent;
+  font-size: 0.95rem;
+  font-family: 'Playfair Display','Noto Serif JP',serif;
+  letter-spacing: 0.18em;
+  color: var(--gray-800);
+  cursor: pointer;
+  transition: background 0.25s ease;
+  text-decoration: none;
+  text-align: center;
+}
+.access-map-btn:hover{
+  background: #000;
+  color: white;
+}
+
+/* 图里电话下面的小字 */
+.access-note{
+  font-size: 0.78rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* 底部交通路线 */
+.access-routes{
+  padding: 6px 0;
+}
+.access-routes p{
+  margin: 18px 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  font-family: 'Songti TC', serif;
+  color: var(--gray-800);
+  font-weight: 300;
+}
+
+
+/* Footer Section */
+/* Footer Section */
+.footer-section{
+  padding: 350px 24px 96px;
+  background: #fff;
+}
+
+.footer-container{
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  /* ✅ 三栏：左内容 + 中间空白 + 右导航 */
+  display: grid;
+  grid-template-columns: 1fr 1fr 260px;
+  column-gap: 56px;
+  align-items: end;
+}
+
+/* Left block */
+.footer-left{
+  grid-column: 1 / span 2; /* ✅ 占左两栏（像图里那样留白大） */
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.footer-logo{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 5px;
+}
+
+.footer-logo-img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -440px;
+}
+
+.footer-logo h1{
+  font-size: 6.5rem;
+  font-family: 'Playfair Display','Noto Serif JP',serif;
+  letter-spacing: -0.04em;
+  color: #1a1a1a;
+  line-height: 1;
+  margin: 0;
+}
+
+.footer-logo p{
+  font-size: 1.6rem;
+  font-family: 'Playfair Display','Noto Serif JP',serif;
+  color: #1a1a1a;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* Map */
+.footer-map{
+  width: 720px;        /* ✅ 图里地图比较大 */
+  max-width: 100%;
+  height: 360px;       /* ✅ 控制高度 */
+  border-radius: 0;    /* 图里是直角 */
+  overflow: hidden;
+}
+
+.footer-map iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Right block */
+.footer-right{
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 56px;
+}
+
+/* Nav */
+.footer-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: right;
+  font-size: 1.4rem;  /* ✅ 缩小 */
+  font-family: 'Playfair Display','Noto Serif JP',serif;
+  letter-spacing: 0.04em;
+  color: #444;
+}
+
+.footer-nav a{
+  color: #444;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: inline-block;
+  transform: translateX(0);
+}
+.footer-nav a:hover{
+  color: #000;
+  transform: translateX(-8px);
+  font-weight: 500;
+}
+
+/* Social icons */
+.footer-socials{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-social{
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  color: rgba(0,0,0,0.55);
+  text-decoration: none;
+  font-family: 'Playfair Display','Noto Serif JP',serif;
+  font-size: 14px;
+  transition: all 0.4s ease;
+  transform: scale(1);
+}
+.footer-social:hover{
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  transform: scale(1.15);
+}
+
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .sidebar {
+        display: flex;
+    }
+
+    .main-content {
+        padding-left: 256px;
+    }
+
+    .hero-mobile-header {
+        display: none;
+    }
+
+    .concept-section {
+        padding: 0;
+    }
+
+    .concept-container {
+        flex-direction: row;
+    }
+
+    .concept-bg {
+        width: 70%;
+        height: 130%;
+    }
+
+    .concept-content {
+        width: 50%;
+        padding-left: 80px;
+    }
+
+    .concept-label {
+        font-size: 1.75rem;
+    }
+
+    .concept-title {
+        font-size: 2.5rem;
+    }
+
+    .concept-images {
+        width: 50%;
+        margin-top: 0;
+        transform: translateY(96px);
+    }
+
+    .concept-image-primary {
+        width: 70%;
+    }
+
+    .concept-image-secondary {
+        left: -40px;
+    }
+
+    .quality-section {
+        padding: 80px;
+    }
+
+    .quality-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quality-title {
+        font-size: 3rem;
+    }
+
+    .quality-text {
+        font-size: 1rem;
+    }
+
+    .news-wrapper {
+        border-radius: 100px;
+        padding: 64px;
+    }
+
+    .news-item {
+        flex-direction: row;
+        align-items: center;
+        border-radius: 60px;
+        padding: 48px;
+    }
+
+    .news-text {
+        font-size: 1.25rem;
+    }
+
+    .news-arrow {
+        margin-top: 0;
+    }
+
+
+
+    .menu-intro-section {
+        padding: 40px 48px 200px 48px;
+    }
+
+    .menu-intro-text-large {
+        font-size: 3.5rem;
+    }
+
+    .menu-intro-text-small {
+        font-size: 2.25rem;
+    }
+
+    .menu-detail-section {
+        padding: 0 48px;
+    }
+
+    .menu-detail-card {
+        flex-direction: row;
+        border-radius: 100px;
+        padding: 80px;
+    }
+
+    .menu-detail-title {
+        font-size: 3.5rem;
+    }
+
+    .menu-detail-description {
+        font-size: 1.125rem;
+    }
+
+    .menu-detail-image {
+        height: 450px;
+        border-radius: 80px;
+    }
+
+    .access-section {
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 200px 48px 0 48px;
+    }
+
+    .access-container {
+        flex-direction: row;
+        border-radius: 100px;
+        padding: 80px;
+    }
+
+    .access-title {
+        font-size: 4.5rem;
+    }
+
+    .access-info-label {
+        width: 192px;
+    }
+
+    .access-info-value {
+        font-size: 1.25rem;
+    }
+
+
+    .footer-section {
+        padding: 350px 96px 96px 96px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+
+    .footer-logo h1 {
+        font-size: 12rem;
+    }
+
+    .footer-logo p {
+        font-size: 1.875rem;
+    }
+
+    .footer-nav {
+        text-align: right;
+        font-size: 1.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 288px;
+    }
+
+    .main-content {
+        padding-left: 288px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
+    }
+
+    section {
+        min-height: auto;
+        scroll-snap-align: none;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}

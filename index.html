@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAL Boulangerie | 代官山のパン屋</title>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+        <div class="flex flex-col">
+            <div class="sidebar-logo">
+                <h1 class="font-serif">HAL</h1>
+                <p>Boulangerie</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#hero" class="nav-link">home</a>
+                <a href="#concept" class="nav-link">introduce</a>
+                <a href="#news" class="nav-link">news</a>
+                <a href="#menu-intro" class="nav-link active">menu</a>
+                <a href="#access" class="nav-link">address</a>
+            </nav>
+        </div>
+        <div class="flex flex-col">
+            <div class="sidebar-social">
+                <i data-lucide="instagram"></i>
+                <i data-lucide="facebook"></i>
+                <i data-lucide="twitter"></i>
+            </div>
+            <div class="sidebar-info">
+                <div class="sidebar-info-text">
+                    営業時間 10:00〜20:00<br/>
+                    <small>※売り切れ次第終了致します</small>
+                </div>
+                <a href="#footer-map" class="sidebar-map-btn">MAP</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Scroll Container -->
+    <main class="main-content">
+        
+        <!-- Section: Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-images-container">
+                <img src="images/tenpo03.jpg" class="hero-image" alt="Hero 3">
+                <img src="images/image022.jpg" class="hero-image" alt="Hero 1">
+                <img src="images/image030.jpg" class="hero-image" alt="Hero 2">
+                
+            </div>
+            <div class="hero-mobile-header">
+                <h1 class="font-serif">HAL</h1>
+                <i data-lucide="menu"></i>
+            </div>
+        </section>
+
+        <!-- Section: Concept -->
+        <section id="concept" class="concept-section">
+            <div class="concept-container">
+                <div class="concept-bg"></div>
+                <div class="concept-content reveal">
+                    <span class="concept-label">— INTRODUCE</span>
+                    <h2 class="concept-title font-serif">
+                        <span class="concept-title-line1">オーベルニュの伝統を、</span>
+                        <span class="concept-title-line2">代官山で。</span>
+                    </h2>
+                    <div class="concept-text">
+                        <p>私たちが大切にしているのは、「土地が語るパン」を感じる一品であること。</p>
+                        <p>伝統製法に寄り添いながら、現代の暮らしに合う軽やかなアレンジを加え、毎日の食卓を少しだけ豊かに、楽しくする存在をめざしています。</p>
+                    </div>
+                    <button class="concept-btn">詳しくみる</button>
+                </div>
+                <div class="concept-images reveal" style="transition-delay: 200ms">
+                    <div class="concept-image-primary">
+                        <img src="images/tenpo01.jpg" alt="Boulangerie">
+                    </div>
+                    <div class="concept-image-secondary">
+                        <img src="images/image024.jpg" alt="Bread">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Quality -->
+<section id="quality" class="quality-section">
+    <div class="quality-container">
+        
+        <!-- Image with Overlay -->
+        <div class="quality-image-wrapper reveal">
+            <div class="quality-image-container">
+                <!-- 底图 -->
+                <img class="quality-base" src="images/image026.png" alt="Croissant">
+                <!-- 覆盖图 -->
+                <img class="quality-overlay" src="images/image027.png" alt="">
+                    </div>
+                </div>
+
+        <!-- Text -->
+        <div class="quality-content reveal" style="transition-delay: 200ms">
+            <span class="quality-label">— QUALITY</span>
+            <h2 class="quality-title font-serif">
+                        火と香りが語る、<br />奥行きのある味わい。
+                    </h2>
+            <p class="quality-text">
+                        素材を尊重し、すべては、一つひとつの味わいのために。<br/>
+                        その積み重ねが、毎日同じ基準で安定したクオリティを生み出しています。
+                    </p>
+            <button class="quality-btn">詳しくみる</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: News -->
+        <section id="news" class="news-section">
+            <div class="news-container">
+                <span class="news-label">— NEWS</span>
+                <div class="news-wrapper reveal">
+                    <div class="news-item">
+                        <div class="news-item-content">
+                            <span class="news-date">2022.11.18</span>
+                            <p class="news-text">名産ブルーチーズ「フルム・ダンベール」を使ったパンや郷土料理をアレンジした惣菜パンなど、フェア限定商品をご用意しております。</p>
+                        </div>
+                        <div class="news-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item-content">
+                            <span class="news-date">2022.11.16</span>
+                            <p class="news-text">ご好評いただいております、デザートに、季節限定でオレンジを使用したデザートが加わります。</p>
+                        </div>
+                        
+                        <div class="news-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item-content">
+                            <span class="news-date">2022.11.30</span>
+                            <p class="news-text">フランス　オーベルニュ地方の伝統パンや郷土料理の惣菜パンなどを販売するオーベルニュ地方フェアを開催いたします。</p>
+                        </div>
+                        <div class="news-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Gallery -->
+        <section id="gallery" class="gallery-section">
+
+            <div class="gallery-container reveal">
+                <div class="gallery-card">
+                    <img src="images/image029.jpg" alt="Bread">
+                </div>
+                <div class="gallery-card">
+                    <img src="images/image015.jpg" alt="Bread">
+                </div>
+                <div class="gallery-card">
+                    <img src="images/image004.jpg" alt="Bread">
+            </div>
+                <div class="gallery-card">
+                    <img src="images/image031.jpg" alt="Bread">
+                </div>
+                <div class="gallery-card">
+                    <img src="images/image009.jpg" alt="Bread">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Menu Intro -->
+        <section id="menu-intro" class="menu-intro-section">
+            <div class="menu-intro-container">
+                <span class="menu-intro-label">— MENU</span>
+                <div class="menu-intro-content reveal">
+                    <p class="menu-intro-text-large">心ほどける、優しいおいしさ。</p>
+                    <p class="menu-intro-text-small">毎日に寄り添うパンを、ひとつひとつ丁寧に。</p>
+                    <button class="menu-intro-btn">詳しくみる</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Menu Detail (Stack Scroll) -->
+        <section id="menu-detail" class="menu-detail-section menu-stack-section">
+            <div class="menu-stack-scroll js-menu-stack-scroll">
+                <div class="menu-stack-sticky">
+                    <div class="menu-stack-stage js-menu-stack-stage">
+                        <!-- Page 01 -->
+                        <div class="menu-detail-card menu-stack-card-page js-menu-stack-card" data-index="0">
+                            <div class="menu-detail-content">
+                                <div class="menu-detail-header">
+                                    <span class="menu-detail-number">01</span>
+                                    <span class="menu-detail-category">おすすめ！</span>
+                                </div>
+                                <h3 class="menu-detail-title font-serif">
+                                    バタークロワッサン
+                                </h3>
+                                <p class="menu-detail-description">発酵バターをたっぷり使用し、
+                            外はサクッと、中はしっとり焼き上げました。</p>
+                                <button class="menu-detail-btn">ORDER NOW</button>
+                            </div>
+                            <div class="menu-detail-image">
+                                <img src="images/image010.jpg" alt="Sandwich">
+                            </div>
+                        </div>
+
+                        <!-- Page 02 -->
+                        <div class="menu-detail-card menu-stack-card-page js-menu-stack-card" data-index="1">
+                            <div class="menu-detail-content">
+                                <div class="menu-detail-header">
+                                    <span class="menu-detail-number">02</span>
+                                    <span class="menu-detail-category">おすすめ！</span>
+                                </div>
+                                <h3 class="menu-detail-title font-serif">
+                                    くるみパン
+                                </h3>
+                                <p class="menu-detail-description">香ばしいくるみの食感と、
+                                小麦の旨みが広がる素朴な味わい。</p>
+                                <button class="menu-detail-btn">ORDER NOW</button>
+                            </div>
+                            <div class="menu-detail-image">
+                                <img src="images/image016.jpg" alt="Bread">
+                            </div>
+                        </div>
+
+                        <!-- Page 03 -->
+                        <div class="menu-detail-card menu-stack-card-page js-menu-stack-card" data-index="2">
+                            <div class="menu-detail-content">
+                                <div class="menu-detail-header">
+                                    <span class="menu-detail-number">03</span>
+                                    <span class="menu-detail-category">おすすめ！</span>
+                                </div>
+                                <h3 class="menu-detail-title font-serif">
+                                    ボルドー・カヌレ
+                                </h3>
+                                <p class="menu-detail-description">香ばしく焼き上げた外側と、
+                                しっとりとした中の食感が楽しめます。</p>
+                                <button class="menu-detail-btn">ORDER NOW</button>
+                            </div>
+                            <div class="menu-detail-image">
+                                <img src="images/image028.jpg" alt="Croissant">
+                            </div>
+                        </div>
+
+                        <!-- Page 04 -->
+                        <div class="menu-detail-card menu-stack-card-page js-menu-stack-card" data-index="3">
+                            <div class="menu-detail-content">
+                                <div class="menu-detail-header">
+                                    <span class="menu-detail-number">04</span>
+                                    <span class="menu-detail-category">おすすめ！</span>
+                                </div>
+                                <h3 class="menu-detail-title font-serif">
+                                    バゲット・ビオ
+                                </h3>
+                                <p class="menu-detail-description">オーガニック小麦を使用し、
+                                香ばしく焼き上げました。</p>
+                                <button class="menu-detail-btn">ORDER NOW</button>
+                            </div>
+                            <div class="menu-detail-image">
+                                <img src="images/image029.jpg" alt="Éclair">
+                            </div>
+                        </div>
+
+                        <!-- Page 05 -->
+                        <div class="menu-detail-card menu-stack-card-page js-menu-stack-card" data-index="4">
+                            <div class="menu-detail-content">
+                                <div class="menu-detail-header">
+                                    <span class="menu-detail-number">05</span>
+                                    <span class="menu-detail-category">おすすめ！</span>
+                                </div>
+                                <h3 class="menu-detail-title font-serif">
+                                    ベリーデニッシュロール
+                                </h3>
+                                <p class="menu-detail-description">何層にも折り重ねたデニッシュ生地に、なめらかなカスタードクリームと甘酸っぱいベリーを巻き込み、香ばしく焼き上げました。</p>
+                                <button class="menu-detail-btn">ORDER NOW</button>
+                            </div>
+                            <div class="menu-detail-image">
+                                <img src="images/image013.jpg" alt="Multigrain Bread">
+                            </div>
+                        </div>
+
+                        <!-- Page 06 -->
+                        <div class="menu-detail-card menu-stack-card-page js-menu-stack-card" data-index="5">
+                            <div class="menu-detail-content">
+                                <div class="menu-detail-header">
+                                    <span class="menu-detail-number">06</span>
+                                    <span class="menu-detail-category">おすすめ！</span>
+                                </div>
+                                <h3 class="menu-detail-title font-serif">
+                                    エクレア＆リングデニッシュ<br/>
+                        </h3>
+                                <p class="menu-detail-description">なめらかなクリームを包んだエクレアと、
+                                サクサク食感のリングデニッシュ。
+                                素材の味を大切に、毎日丁寧に焼き上げています。</p>
+                                <button class="menu-detail-btn">ORDER NOW</button>
+                            </div>
+                            <div class="menu-detail-image">
+                                <img src="images/image009.jpg" alt="Almond Croissant">
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Section: Access -->
+<section id="access" class="access-section">
+  <div class="access-container reveal">
+    <!-- LEFT -->
+    <div class="access-content">
+      <span class="access-label">— ACCESS</span>
+      <h2 class="access-title font-serif">Boulangerie HAL</h2>
+
+      <div class="access-divider"></div>
+
+      <div class="access-info">
+        <!-- 営業時間 -->
+        <div class="access-info-row">
+          <span class="access-info-label">営業時間</span>
+          <span class="access-info-value">10:00 〜 20:00</span>
+        </div>
+
+        <div class="access-row-divider"></div>
+
+        <!-- アクセス -->
+        <div class="access-info-row access-info-row-stack">
+          <span class="access-info-label">アクセス</span>
+          <div class="access-info-group">
+            <span class="access-info-value">東京都渋谷区猿楽町29-18</span>
+            <a href="#footer-map" class="access-map-btn">MAP</a>
+          </div>
+        </div>
+
+        <div class="access-row-divider"></div>
+
+        <!-- お問い合わせ -->
+        <div class="access-info-row access-info-row-stack">
+          <span class="access-info-label">お問い合わせ</span>
+          <div class="access-info-group">
+            <span class="access-info-value">電話：03-3344-1010</span>
+            <p class="access-note">※混雑時など、電話に出られない場合がございます。ご了承くださいませ。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="access-divider"></div>
+
+      <!-- 路線案内（图里三行） -->
+      <div class="access-routes">
+        <p>東急東横線［代官山駅］下車　徒歩3分</p>
+        <p>東急東横線・地下鉄日比谷線［中目黒駅］　徒歩7分</p>
+        <p>JR山手線・JR埼京線・地下鉄日比谷線［恵比寿駅］　徒歩10分</p>
+      </div>
+
+      <div class="access-divider"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="access-image">
+      <img src="images/tenpo01.jpg" alt="Store">
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<section id="footer" class="footer-section">
+  <div class="footer-container">
+
+    <!-- Left: logo + map -->
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="HAL Boulangerie Logo" class="footer-logo-img reveal">
+      </div>
+
+      <div id="footer-map" class="footer-map reveal" style="transition-delay: 180ms">
+        <!-- ✅ 换成你自己的 Google Maps embed -->
+        <iframe
+          title="HAL Boulangerie Map"
+          src="https://www.google.com/maps?q=東京都渋谷区猿楽町29-18&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Right: nav + socials -->
+    <div class="footer-right reveal" style="transition-delay: 240ms">
+      <nav class="footer-nav font-serif">
+        <a href="#hero">Home</a>
+        <a href="#concept">Introduce</a>
+        <a href="#news">News</a>
+        <a href="#menu-intro">Menu</a>
+        <a href="#access">Address</a>
+      </nav>
+
+      <div class="footer-socials">
+  <a href="#" aria-label="Instagram" class="footer-social"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" aria-label="Facebook" class="footer-social"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" aria-label="X" class="footer-social"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="#" aria-label="YouTube" class="footer-social"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+  </div>
+</section>
+
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
